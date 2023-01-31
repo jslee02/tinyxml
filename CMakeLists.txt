@@ -11,3 +11,8 @@ install(TARGETS tinyxml
         RUNTIME DESTINATION lib)
 install(FILES tinyxml.h
         DESTINATION include)
+
+# Install tinyxml.pc
+install(FILES ${PC_CONFIG_OUT} DESTINATION ${PC_CONFIG_INSTALL_DIR})
+install(FILES "tinyxml.pc"
+        DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig")
